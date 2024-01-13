@@ -1,4 +1,4 @@
-package com.cristianboicu.cloudstorage.ui.screens
+package com.cristianboicu.cloudstorage.ui.screens.settings
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable

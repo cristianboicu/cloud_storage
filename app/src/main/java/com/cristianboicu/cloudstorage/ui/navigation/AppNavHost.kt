@@ -6,7 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.cristianboicu.cloudstorage.ui.screens.MainScreen
-import com.cristianboicu.cloudstorage.ui.screens.SettingsScreen
+import com.cristianboicu.cloudstorage.ui.screens.settings.SettingsScreen
 import com.cristianboicu.cloudstorage.ui.screens.recent.RecentScreen
 import com.cristianboicu.cloudstorage.ui.screens.trash.TrashScreen
 
@@ -16,7 +16,6 @@ fun AppNavHost(
     startDestination: String,
     drawerState: DrawerState,
 ) {
-
     NavHost(navController = navController, startDestination = startDestination) {
         composable(NavRoutes.MainScreen.route) {
             MainScreen(navController, drawerState)
@@ -31,5 +30,4 @@ fun AppNavHost(
             TrashScreen()
         }
     }
-
 }
