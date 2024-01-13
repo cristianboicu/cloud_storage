@@ -1,21 +1,15 @@
 package com.cristianboicu.cloudstorage
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.material3.*
-import com.cristianboicu.cloudstorage.ui.screens.MainComposable
-import com.cristianboicu.cloudstorage.ui.screens.MainScreen
+import androidx.appcompat.app.AppCompatActivity
+import com.cristianboicu.cloudstorage.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
-class MainActivity : ComponentActivity() {
-
+@AndroidEntryPoint
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            MainComposable()
-        }
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
-
 }
