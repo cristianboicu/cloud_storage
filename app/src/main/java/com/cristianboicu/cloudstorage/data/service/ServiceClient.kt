@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ServiceClient {
-    private const val BASE_URL = "http://192.168.100.3:6969/api/v1/"
+    private const val BASE_URL = "http://eurgberuiygbw.go.ro/api/v1/"
     private var serviceClient: ServiceApi? = null
 
     fun getClient(): ServiceApi {

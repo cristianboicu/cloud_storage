@@ -1,9 +1,12 @@
 package com.cristianboicu.cloudstorage.data.repository
 
+import com.cristianboicu.cloudstorage.model.login.LoginRequest
+import com.cristianboicu.cloudstorage.model.login.LoginResponse
+import com.cristianboicu.cloudstorage.model.register.RegisterRequest
 import okhttp3.ResponseBody
 import retrofit2.Response
 
 interface Repository {
-    suspend fun register(username: String, email: String, password: String): Response<ResponseBody>
-    suspend fun login(email: String, password: String): Response<Unit>
+    suspend fun register(registerRequest: RegisterRequest): Response<ResponseBody>
+    suspend fun login(loginRequest: LoginRequest): Response<LoginResponse>
 }

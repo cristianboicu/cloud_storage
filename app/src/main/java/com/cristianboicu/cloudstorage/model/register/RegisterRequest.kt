@@ -1,4 +1,4 @@
-package com.cristianboicu.cloudstorage.model
+package com.cristianboicu.cloudstorage.model.register
 
 data class RegisterRequest(
     val username: String,
