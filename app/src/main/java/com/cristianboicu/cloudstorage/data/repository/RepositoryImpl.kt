@@ -5,7 +5,7 @@ import okhttp3.ResponseBody
 import retrofit2.Response
 import javax.inject.Inject
 
-class RepositoryImpl @Inject constructor(val remote: Remote) : Repository {
+class RepositoryImpl @Inject constructor(private val remote: Remote) : Repository {
     override suspend fun register(
         username: String,
         email: String,
